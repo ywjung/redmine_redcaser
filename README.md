@@ -70,3 +70,9 @@ guard
 
 > **NOTE:** If you intrerupt guard and the database is no longer present just
 > execute the command to create it again.
+
+
+bundle config unset deployment
+bundle install
+bundle exec rake redmine:plugins:migrate RAILS_ENV=production
+
